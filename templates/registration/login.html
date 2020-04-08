@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NewBegin-Login</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #40739e;
+            padding: 0 10px;
+        }
+        .wrapper {
+            max-width: 500px;
+            width: 100%;
+            background-color: #f5f6fa;
+            margin: 30px auto;
+            box-shadow: 1px,1px,2px,rgba(0, 0, 0, 0.125);
+            padding: 30px;
+        }
+        .wrapper .title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 25px;
+            color: #40739e;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        .wrapper form {
+            width: 100%;
+            align-items: center;
+        }
+        .wrapper form input {
+            margin-bottom: 15px;
+            
+            display: flex;
+            align-items: center;
+        }
+        .wrapper form input label {
+            width: 200px;
+            margin-left: 4em;
+            color: #757575;
+            margin-right: 10px;
+            font-size: 14px;
+        }
+    </style>
+   
+</head>
+<body>
+    <div class="wrapper">
+        <h3 class="title"> Login</h3>
+    <form method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input class="btn btn-danger" type="submit" value="login">
+        <p>Don't have an account <a href="{% url 'signup' %}"> click here</a> to register</p>
+    </form>
+    </div>
+</body>
+</html>

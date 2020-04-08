@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>NewBegin &mdash; Software Training</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link rel="stylesheet" href="{% static 'css/custom-bs.css' %}">
+    <link rel="stylesheet" href="{% static 'css/jquery.fancybox.min.css' %}">
+    <link rel="stylesheet" href="{% static 'fonts/icomoon/style.css' %}">
+    <link rel="stylesheet" href="{% static 'fonts/line-icons/style.css' %}">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">  
+</head>
+<body>
+    {% block body_block %}
+    <header class="site-navbar mt-3" id="top">
+        <div class="container-fluid">
+          <div class="row align-items-center">
+            <div class="site-logo col-6"><a href="#">NewBegin</a></div>
+  
+  
+            
+  
+            <nav class="mx-auto site-navigation">
+              <ul class="site-menu js-clone-nav d-none d-lg-block">
+                <li><a href="#" class="nav-link active">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Projects</a></li>
+                <li class="has-children">
+                  <a href="#">Trainings</a>
+                  <ul class="dropdown">
+                    <li><a href="#">Python Web Development</a></li>
+                    <li><a href="#">Java Web Development</a></li>
+                    <li><a href="#">Full Stack Training</a></li>
+                    <li><a href="#">Android Development</a></li>
+                    <li><a href="#">Ios Development</a></li>
+                    <li><a href="#">TrainedGrad1</a></li>
+                    <li><a href="#">TrainedGrad2</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+              </ul>
+            </nav>
+            
+            <div class="col-6 site-burger-menu d-block d-lg-none text-right">
+              <a href="#" class="site-menu-toggle js-menu-toggle"><span class="icon-menu h3"></span></a>
+            </div>
+  
+          </div>
+        </div>
+      </header>
+    {% endblock%}
+</body>
+</html>

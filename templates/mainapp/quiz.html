@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method = "POST" action="/answers">
+        {% csrf_token %}
+        {% for question in question %}       
+    <h5>Q{{ question.question }} </h5><br>
+   
+        <input type = "radio" name="{{question.id}}" value="{{question.choice_one}}">{{question.choice_one}}<br>
+        <input type = "radio" name="{{question.id}}" value="{{question.choice_two}}">{{question.choice_two}}<br>
+        <input type = "radio" name="{{question.id}}" value="{{question.choice_three}}">{{question.choice_three}}<br>
+        <input type = "radio" name="{{question.id}}" value="{{question.choice_four}}">{{question.choice_four}}<br>
+    
+    <br> 
+        {% endfor %}
+    <div style="text-align:center"> <input type="submit" class="submit" id="submit" value="Submit"/></div>
+        
+    </form>
+</body>
+</html>

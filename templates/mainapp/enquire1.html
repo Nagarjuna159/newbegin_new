@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #40739e;
+            padding: 0 10px;
+        }
+        .wrapper {
+            max-width: 500px;
+            width: 100%;
+            background-color: #f5f6fa;
+            margin: 20px auto;
+            box-shadow: 1px,1px,2px,rgba(0, 0, 0, 0.125);
+            padding: 30px;
+        }
+        .wrapper .title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 25px;
+            color: #40739e;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        .wrapper form {
+            width: 100%;
+        }
+        .wrapper form input {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .wrapper form input label {
+            width: 200px;
+            color: #757575;
+            margin-right: 10px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <h3 class="title"> Enroll Course</h3>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="id_name">Name:</label> <input type="text" name="name" maxlength="60" required id="id_name">
+
+<label for="id_select_course">Select course:</label> <select name="select_course" id="id_select_course">
+  <option value="Python Web Development">Python Web Development</option>
+
+  <option value="Java Web Development">Java Web Development</option>
+
+  <option value="Full Stack Training">Full Stack Training</option>
+
+  <option value="Java &amp; Python">Java &amp; Python</option>
+
+</select>
+<br>
+<label for="id_email">Email:</label> <input type="email" name="email" maxlength="254" required id="id_email">
+
+<label for="id_phone">Phone:</label> <input type="number" name="phone" required id="id_phone">
+        
+        <button type="submit" class="btn btn-danger">submit</button>
+    </form>
+    </div>
+</body>
+</html>

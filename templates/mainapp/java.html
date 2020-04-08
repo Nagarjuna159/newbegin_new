@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java &mdash; NewBegin</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<style>
+  .h3 {
+       text-align: center;
+   }
+   .card {
+       margin-top: 2em;
+       margin-left: 4em;
+       margin-right: 2em;
+       margin-bottom: 2em;
+   }
+   .card-title {
+       margin-top: 1em;
+       text-align: center;
+   }
+   .para {
+       margin-top: 1em;
+       margin-left: 5em;
+       margin-right: 5em;
+       font-size: larger;
+       font-family: Cambria;
+      
+   }
+   
+  
+   body {
+    background-color: #bdc3c7;
+   }
+   .navbar {
+     background-color:transparent;
+   }
+   .nav-item {
+     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+     padding-left: 1em;
+     padding-right: 1em;
+     font-weight: 700;
+   }
+   .navbar-brand {
+     padding-left: 6em;
+     padding-right: 6em;
+     letter-spacing: 0.2em;
+     font-size: 1.5em;
+   }
+</style>
+</head>
+<body>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">NewBegin</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button> 
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav nav navbar-nav navbar-center">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'about' %}">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">AI-ML</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="{% url 'python_web' %}" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Courses
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="{% url 'python_web' %}">Python Web Development</a>
+                <a class="dropdown-item" href="{% url 'java' %}">Java Web Development</a>
+                <a class="dropdown-item" href="{% url 'fullstack' %}">Full Stack Training</a>
+                <a class="dropdown-item" href="{% url 'javapy' %}">Python, Java Training</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <br>
+      <div class="row">
+        <div class="col">
+         
+        </div>
+        <div class="col">
+          <h3 class="h3">Java Web Development</h3>
+          <hr style="background-color:#e74c3c;">
+        </div>
+        <div class="col" style="padding-left: 5em;">
+          <a href="{% url 'enroll' %}" class="btn btn-danger btn-md">Enroll Course</a>
+        </div>
+      </div>
+    </div>
+      
+      <h4 style="margin-left: 4em;">Java Training</h4>
+      <div class="back">
+      <p class="para">If you are searching for a leading Java & Python certification training in Madanapalle, your search ends here.
+        NewBegin strives to contribute the highest quality trained engineers at IT companies with in-house placement support.
+        NewBegin teaches every course with 80% practical and 20% theory which lead to 100% placement at IT company.
+        <p class="para">The course introduces Java as a programming language and covers all the fundamentals of Java, including all the advanced
+          topics needed to become an expert Java developer. The course is designed with adequate examples & visualisaton to make beginner
+        understand quickly with clear concepts. This course with refine & enhance your Java skills to a level where you can
+      make the most efficient use of advanced features of Java technology. </p></div>
+      
+        <h3 style="margin-left: 3em;">Overview:</h3>
+        <div class="row" style="margin-left: 6em;">
+            <div class="card" style="width: 18rem;">
+                
+                <h5 class="card-title">Duration</h5>
+                <div class="card-body">
+                  <p class="card-text">12 weeks of learning includes live interaction with experienced faculty & significantly improves technical skills & capability.</p>
+                </div>
+            </div>
+            
+            <div class="card" style="width: 18rem;">
+                
+                <h5 class="card-title">Coding Assignments</h5>
+                <div class="card-body">
+                  <p class="card-text">Assignments help to test skills by solving practical problems & gain confidence for industry projects.</p>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                
+                <h5 class="card-title">Key Highlights</h5>
+                <div class="card-body">
+                  <p class="card-text">Live class room session with focus on interaction, convenience and flexibility - career advancement & 100% placement assistance.</p>
+                </div>
+            </div>
+            
+        </div>
+        <h3 style="margin-left: 3em;">Core Skills:</h3>
+        <p class="para">Core Java, Advanced Java, Java Frameworks, Sql</p>
+        <h3 style="margin-left: 3em;">Additional Skills:</h3>
+        
+        <p class="para">Real-Time Project</p>
+        <p class="para">Data Structures</p>
+        <p class="para">Technical Aptitude</p>
+        <p class="para">Mathematical Aptitude</p>
+        <p class="para">Reasoning</p>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  
+</body>
+</html>

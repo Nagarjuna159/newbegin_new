@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enroll Course &mdash; NewBegin</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #40739e;
+            padding: 0 10px;
+        }
+        .wrapper {
+            max-width: 500px;
+            width: 100%;
+            background-color: #f5f6fa;
+            margin: 20px auto;
+            box-shadow: 1px,1px,2px,rgba(0, 0, 0, 0.125);
+            padding: 30px;
+        }
+        .wrapper .title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 25px;
+            color: #40739e;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        .wrapper form {
+            width: 100%;
+        }
+        .wrapper form input {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .wrapper form input label {
+            width: 200px;
+            color: #757575;
+            margin-right: 10px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">NewBegin</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button> 
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav nav navbar-nav navbar-center">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'about' %}">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">AI-ML</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="{% url 'python_web' %}" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Courses
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="{% url 'python_web' %}">Python Web Development</a>
+                <a class="dropdown-item" href="{% url 'java' %}">Java Web Development</a>
+                <a class="dropdown-item" href="{% url 'fullstack' %}">Full Stack Training</a>
+                <a class="dropdown-item" href="{% url 'javapy' %}">Python, Java Training</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    <div class="wrapper">
+        <h3 class="title"> Enroll Course</h3>
+        <form method="POST" action="/thankyou">
+            {% csrf_token %}
+            <label for="id_name">Name:</label>
+            <input type="text" name="name" placeholder="Enter your name" id="id_name">
+            <label for = "id_select_course">Select Course</label>
+            <select name="select_course" id="id_select_course">
+                <option value="Python Web Development">Python Web Development</option>
+                <option value="Java Web Development">Java Web Development</option>
+                <option value="Full Stack Training">Full Stack Training</option>
+                <option value="Java & Python">Java & Python</option>
+            </select><br>
+            <label for = "id_email">Email</label>
+            <input type="email" name="email" placeholder="Enter your email" id="id_email">
+            <label for = "id_phone">Mobile Number</label>
+            <input type="number" name="phone" placeholder="Enter your mobile number" id="id_phone">
+            <button type="submit" class="btn btn-danger">submit</button>
+        </form>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,70 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>About &mdash;NewBegin </title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        .navbar {
+     background-color:transparent;
+   }
+   .nav-item {
+     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+     padding-left: 1em;
+     padding-right: 1em;
+     font-weight: 700;
+   }
+   .navbar-brand {
+     padding-left: 6em;
+     padding-right: 6em;
+     letter-spacing: 0.2em;
+     font-size: 1.5em;
+   }
+    </style>
+</head>
+<body>
+  <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">NewBegin</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button> 
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav nav navbar-nav navbar-center">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'about' %}">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">AI-ML</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="{% url 'python_web' %}" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Courses
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="{% url 'python_web' %}">Python Web Development</a>
+            <a class="dropdown-item" href="{% url 'java' %}">Java Web Development</a>
+            <a class="dropdown-item" href="{% url 'fullstack' %}">Full Stack Training</a>
+            <a class="dropdown-item" href="{% url 'javapy' %}">Python, Java Training</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <img src="{% static 'images/about_us.jpg' %}" alt="About_us" style="width:100%;height: 500px;">
+  <hr>
+  <h3 style="text-align: center;">About Us</h3>
+  <p style="margin-left: 1em;">NewBegin has started to provide training for the students who are pursuing graduation in rural areas. Our main objective is to train them on cutting edge technologies and make them industry ready. NewBegin will act as a bridge between the students on one end by making students ready to work and on the other end provide a easy fresher hiring to the software companies. </p>
+  <p style="margin-left: 1em;">We designed unique training programs after consulting industry experts which make students fit the roles in IT industry.
+  we provide complete assistance to the fresher and we extend our support till he/she gets placed in a reputed company. </p>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
